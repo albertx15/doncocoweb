@@ -154,6 +154,87 @@
         .metric h3 { font-size: 28px; color: var(--accent-yellow); margin-bottom: 5px; }
         .hero .metric p, .metric p { margin: 0; font-size: 14px; font-weight: 600; color: var(--text-dark); text-transform: uppercase; }
 
+        /* --- OPERATIONS SECTION --- */
+        .operations { background-color: var(--primary-green); color: var(--white); padding: 80px 0; }
+        .operations h2 { color: var(--white); text-align: center; font-size: 32px; margin-bottom: 50px; }
+
+        .catalog-category {
+            margin-bottom: 50px;
+        }
+
+        .catalog-category:last-child {
+            margin-bottom: 0;
+        }
+
+        .operations h3 {
+            color: var(--accent-yellow);
+            font-size: 26px;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(245, 179, 1, 0.35);
+        }
+
+        .catalog-subblock {
+            margin-bottom: 35px;
+        }
+
+        .catalog-subblock:last-child {
+            margin-bottom: 0;
+        }
+
+        .operations h4 {
+            color: var(--accent-yellow);
+            font-size: 19px;
+            margin: 25px 0 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 4px 4px 0 0;
+            display: block;
+        }
+
+        .service-card-body {
+            padding: 22px 24px;
+            flex: 1;
+        }
+
+        .service-card h5 {
+            color: var(--accent-yellow);
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #e0e0e0;
+            font-size: 14.5px;
+            margin-bottom: 0;
+        }
+
         /* --- LEADERSHIP SECTION --- */
         .leadership { padding: 80px 0; }
         .leadership-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: center; }
@@ -177,36 +258,6 @@
 
         .leadership-content h2 { font-size: 32px; }
         .leadership-content h4 { color: var(--accent-yellow); font-size: 18px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
-
-        /* --- OPERATIONS SECTION --- */
-        .operations { background-color: var(--primary-green); color: var(--white); padding: 80px 0; }
-        .operations h2 { color: var(--white); text-align: center; font-size: 32px; margin-bottom: 50px; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-        .service-card {
-            background: rgba(255, 255, 255, 0.06);
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-        }
-        .service-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            display: block;
-        }
-        .service-card-body {
-            padding: 25px;
-            flex: 1;
-        }
-        .service-card h3 { color: var(--accent-yellow); font-size: 20px; }
-        .service-card p { color: #e0e0e0; font-size: 15px; margin-bottom: 0; }
 
         /* --- FOOTER --- */
         footer { background-color: var(--text-dark); color: var(--white); padding: 60px 0 30px; }
@@ -235,8 +286,8 @@
                 <nav>
                     <ul>
                         <li><a href="#about"><span class="lang-en">Corporate Profile</span><span class="lang-es">Perfil Corporativo</span></a></li>
-                        <li><a href="#leadership"><span class="lang-en">Leadership</span><span class="lang-es">Liderazgo</span></a></li>
                         <li><a href="#operations"><span class="lang-en">Operations</span><span class="lang-es">Operaciones</span></a></li>
+                        <li><a href="#leadership"><span class="lang-en">Leadership</span><span class="lang-es">Liderazgo</span></a></li>
                         <li><a href="#contact"><span class="lang-en">Contact</span><span class="lang-es">Contacto</span></a></li>
                     </ul>
                 </nav>
@@ -276,6 +327,149 @@
         </div>
     </section>
 
+    <section class="operations" id="operations">
+        <div class="container">
+            <h2><span class="lang-en">Our Core Product Lines</span><span class="lang-es">Nuestras Líneas de Productos Principales</span></h2>
+
+            <!-- Category 1: Coconut Beverages & Specialties -->
+            <div class="catalog-category">
+                <h3>
+                    <span class="lang-en">Coconut Beverages &amp; Specialties</span>
+                    <span class="lang-es">Bebidas y Especialidades de Coco</span>
+                </h3>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="cocadas.jpg" alt="Cocadas de Autor">
+                        <div class="service-card-body">
+                            <h5><span class="lang-en">Signature Coconut Shakes</span><span class="lang-es">Cocadas de Autor</span></h5>
+                            <p><span class="lang-en">Our flagship creamy coconut shakes manufactured using premium locally sourced coconuts under strict standardization protocols across all retail branches.</span><span class="lang-es">Nuestras cocadas insignia elaboradas con cocos seleccionados de origen local bajo estrictos protocolos de estandarización en todas nuestras sucursales.</span></p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="conchadecoco.jpg" alt="Helado en Concha de Coco">
+                        <div class="service-card-body">
+                            <h5><span class="lang-en">Coconut Shell Ice Cream</span><span class="lang-es">Helado en Concha de Coco</span></h5>
+                            <p><span class="lang-en">Artisanal coconut ice cream packaged directly in a natural coconut shell, offering a differentiated, high-margin experiential dessert for retail points of sale.</span><span class="lang-es">Helado artesanal presentado directamente en concha de coco natural, ofreciendo un postre experiencial de alto valor comercial en puntos de venta.</span></p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="aguadecoco.jpg" alt="Agua de Coco Natural">
+                        <div class="service-card-body">
+                            <h5><span class="lang-en">Natural Coconut Water</span><span class="lang-es">Agua de Coco Natural</span></h5>
+                            <p><span class="lang-en">Pure, unprocessed 100% natural coconut water bottled and distributed daily through an efficient cold-chain logistics system to guarantee freshness.</span><span class="lang-es">Agua de coco 100% pura y sin procesar, envasada y distribuida diariamente mediante logística de cadena de frío para garantizar máxima frescura.</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 2: Artisanal Popsicles -->
+            <div class="catalog-category">
+                <h3>
+                    <span class="lang-en">Artisanal Popsicles</span>
+                    <span class="lang-es">Paletas Artesanales</span>
+                </h3>
+
+                <div class="catalog-subblock">
+                    <h4>
+                        <span class="lang-en">Natural Line</span>
+                        <span class="lang-es">Línea Natural</span>
+                    </h4>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <img src="fresa.jpg" alt="Paleta Natural de Fresa">
+                            <div class="service-card-body">
+                                <h5><span class="lang-en">Natural Strawberry</span><span class="lang-es">Fresa Natural</span></h5>
+                                <p><span class="lang-en">Refreshing fruit-based popsicle formulated with selected whole strawberries for high-volume daily rotation across retail locations.</span><span class="lang-es">Paleta refrescante a base de fruta formulada con fresas enteras seleccionadas para alta rotación diaria en sucursales.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="parchita.jpg" alt="Paleta Natural de Parchita">
+                            <div class="service-card-body">
+                                <h5><span class="lang-en">Passion Fruit (Parchita)</span><span class="lang-es">Parchita Tropical</span></h5>
+                                <p><span class="lang-en">Tropical passion fruit popsicle crafted from natural pulp, balancing vibrant citrus acidity with standardized sweetness.</span><span class="lang-es">Paleta tropical elaborada con pulpa natural de parchita, equilibrando acidez vibrante y dulzor estandarizado.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="mora.jpg" alt="Paleta Natural de Mora">
+                            <div class="service-card-body">
+                                <h5><span class="lang-en">Wild Blackberry (Mora)</span><span class="lang-es">Mora Silvestre</span></h5>
+                                <p><span class="lang-en">Andean blackberry popsicle produced with 100% natural fruit puree, delivering intense flavor and consistent quality.</span><span class="lang-es">Paleta de mora andina elaborada con puré de fruta 100% natural, ofreciendo sabor intenso y calidad consistente.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="catalog-subblock">
+                    <h4>
+                        <span class="lang-en">Creamy &amp; Stuffed Line</span>
+                        <span class="lang-es">Línea Cremosa &amp; Rellena</span>
+                    </h4>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <img src="paletadecoco.jpg" alt="Paleta Cremosa de Coco">
+                            <div class="service-card-body">
+                                <h5><span class="lang-en">Creamy Coconut</span><span class="lang-es">Coco Cremoso</span></h5>
+                                <p><span class="lang-en">Signature cream-based coconut popsicle coated with shredded coconut flakes, consolidated as our top-selling frozen SKU.</span><span class="lang-es">Paleta insignia a base de crema de coco recubierta con coco rallado, consolidada como nuestro SKU congelado líder en ventas.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="chocolate.jpg" alt="Paleta Cremosa de Chocolate">
+                            <div class="service-card-body">
+                                <h5><span class="lang-en">Artisanal Chocolate</span><span class="lang-es">Chocolate Artesanal</span></h5>
+                                <p><span class="lang-en">Velvety cream-based chocolate popsicle crafted with selected cocoa for an intense and indulgent flavor profile.</span><span class="lang-es">Paleta cremosa de textura aterciopelada elaborada con cacao seleccionado para un perfil de sabor intenso e indulgente.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="fresalechecondensada.jpg" alt="Paleta de Fresa con Leche Condensada">
+                            <div class="service-card-body">
+                                <h5><span class="lang-en">Strawberry &amp; Condensed Milk</span><span class="lang-es">Fresa con Leche Condensada</span></h5>
+                                <p><span class="lang-en">Stuffed artisanal popsicle combining natural strawberry with a rich condensed milk core to drive premium ticket value.</span><span class="lang-es">Paleta artesanal rellena que combina fresa natural con un centro cremoso de leche condensada de alto atractivo comercial.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="manichoco.jpg" alt="Paleta Maní Choco">
+                            <div class="service-card-body">
+                                <h5><span class="lang-en">Crunchy Choco-Peanut</span><span class="lang-es">Maní Choco Crocante</span></h5>
+                                <p><span class="lang-en">Creamy popsicle enrobed in chocolate with roasted peanut pieces, engineered for multi-textured indulgence and repeat purchases.</span><span class="lang-es">Paleta cremosa bañada en chocolate con trozos de maní tostado, diseñada para generar recompra y diferenciación en vitrina.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 3: Gourmet Donuts -->
+            <div class="catalog-category">
+                <h3>
+                    <span class="lang-en">Gourmet Donuts</span>
+                    <span class="lang-es">Donas Gourmet</span>
+                </h3>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="dona arequipe.jpeg" alt="Dona Arequipe Clásica">
+                        <div class="service-card-body">
+                            <h5><span class="lang-en">Classic Arequipe Donut</span><span class="lang-es">Dona Arequipe Clásica</span></h5>
+                            <p><span class="lang-en">Freshly baked artisanal donut generously filled with traditional dulce de leche (arequipe) and topped with chocolate glaze and sprinkles.</span><span class="lang-es">Dona artesanal horneada diariamente, generosamente rellena de arequipe tradicional con cobertura de chocolate y lluvia de colores.</span></p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="homero arequipe.jpeg" alt="Donut Homero Arequipe">
+                        <div class="service-card-body">
+                            <h5><span class="lang-en">Homer Arequipe Donut</span><span class="lang-es">Donut Homero Arequipe</span></h5>
+                            <p><span class="lang-en">Iconic pink-glazed donut stuffed with creamy arequipe, designed for strong visual merchandising impact and cross-selling in stores.</span><span class="lang-es">Icónica dona con glaseado rosa rellena de cremoso arequipe, diseñada para alto impacto visual en vitrina y venta cruzada.</span></p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="homero nutella.jpeg" alt="Donut Homero Nutella">
+                        <div class="service-card-body">
+                            <h5><span class="lang-en">Homer Nutella Donut</span><span class="lang-es">Donut Homero Nutella</span></h5>
+                            <p><span class="lang-en">Premium pink-glazed specialty donut generously filled with hazelnut cocoa spread to capture high-margin impulse demand.</span><span class="lang-es">Especialidad gourmet con glaseado rosa rellena de crema de avellanas y cacao, orientada al segmento de compra por impulso premium.</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="leadership" id="leadership">
         <div class="container">
             <div class="leadership-grid">
@@ -294,42 +488,6 @@
 
                     <p class="lang-en">His vision focuses on operational excellence, financial sustainability, and delivering a standardized, premium product across all points of sale.</p>
                     <p class="lang-es">Su visión se centra en la excelencia operativa, la sostenibilidad financiera y la entrega de un producto premium estandarizado en todos los puntos de venta.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="operations" id="operations">
-        <div class="container">
-            <h2><span class="lang-en">Our Core Product Lines</span><span class="lang-es">Nuestras Líneas de Productos Principales</span></h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <img src="cocadas.jpg" alt="Signature Coconut Shakes">
-                    <div class="service-card-body">
-                        <h3><span class="lang-en">Signature Coconut Shakes</span><span class="lang-es">Cocadas de Autor</span></h3>
-                        <p><span class="lang-en">Our flagship "Cocadas" are manufactured using high-quality, locally sourced coconuts, adhering to strict standardization processes across all our retail branches to ensure consistent flavor and quality.</span><span class="lang-es">Nuestras "Cocadas" insignia se fabrican utilizando cocos de alta calidad de origen local, adhiriéndose a estrictos procesos de estandarización en todas nuestras sucursales para garantizar un sabor y calidad consistentes.</span></p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="aguadecoco.jpg" alt="100% Natural Coconut Water">
-                    <div class="service-card-body">
-                        <h3><span class="lang-en">100% Natural Coconut Water</span><span class="lang-es">Agua de Coco 100% Natural</span></h3>
-                        <p><span class="lang-en">Pure, unprocessed coconut water distributed daily. We maintain a highly efficient cold-chain logistics system to guarantee product freshness from extraction to the final consumer.</span><span class="lang-es">Agua de coco pura y sin procesar distribuida diariamente. Mantenemos un sistema de logística de cadena de frío altamente eficiente para garantizar la frescura del producto desde la extracción hasta el consumidor final.</span></p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="paletadecoco.jpg" alt="Artisanal Popsicles (Paletas)">
-                    <div class="service-card-body">
-                        <h3><span class="lang-en">Artisanal Popsicles (Paletas)</span><span class="lang-es">Paletas Artesanales</span></h3>
-                        <p><span class="lang-en">A diverse portfolio of premium natural, cream-based, and stuffed artisanal popsicles. Developed through proprietary recipes that cater to premium consumer tastes.</span><span class="lang-es">Un portafolio diverso de paletas artesanales premium naturales, a base de crema y rellenas. Desarrolladas a través de recetas exclusivas que satisfacen los gustos de consumidores exigentes.</span></p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="dona arequipe.jpeg" alt="Gourmet Donuts">
-                    <div class="service-card-body">
-                        <h3><span class="lang-en">Gourmet Donuts</span><span class="lang-es">Donas Gourmet</span></h3>
-                        <p><span class="lang-en">High-rotation bakery products that complement our beverage lines. Manufactured daily to optimize inventory turnover and maximize cross-selling opportunities in our stores.</span><span class="lang-es">Productos de panadería de alta rotación que complementan nuestras líneas de bebidas. Fabricadas diariamente para optimizar la rotación de inventario y maximizar las oportunidades de venta cruzada en nuestras tiendas.</span></p>
-                    </div>
                 </div>
             </div>
         </div>
