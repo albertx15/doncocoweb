@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Don Coco | Premium F&B Retail Chain</title>
+
+    <style>
+
+        /* --- BRAND COLORS EXTRACTED FROM LOGO --- */
+
+        :root {
+
+            --primary-green: #0d5c22; 
+
+            --accent-yellow: #f5b301; 
+
+            --text-dark: #2d2d2d;
+
+            --text-light: #666666;
+
+            --bg-light: #f9f9f9;
+
+            --white: #ffffff;
+
+            --border-color: #e0e0e0;
+
+        }
+
+
+
+        /* --- BASE STYLES --- */
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+        }
+
+
+
+        body {
+
+            color: var(--text-dark);
+
+            line-height: 1.6;
+
+            background-color: var(--white);
+
+        }
+
+
+
+        h1, h2, h3 { color: var(--primary-green); margin-bottom: 15px; }
+
+        p { color: var(--text-light); margin-bottom: 15px; }
+
+
+
+        .container {
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding: 0 20px;
+
+        }
+
+
+
+        /* --- LANGUAGE SWITCHER LOGIC --- */
+
+        /* By default, hide Spanish text if body has class 'en', and vice versa */
+
+        body.en .lang-es { display: none; }
+
+        body.es .lang-en { display: none; }
+
+
+
+        .lang-switch {
+
+            display: flex;
+
+            gap: 10px;
+
+            align-items: center;
+
+            margin-left: 20px;
+
+        }
+
+
+
+        .lang-btn {
+
+            background: transparent;
+
+            border: 2px solid var(--primary-green);
+
+            color: var(--primary-green);
+
+            padding: 4px 10px;
+
+            border-radius: 20px;
+
+            cursor: pointer;
+
+            font-weight: bold;
+
+            font-size: 12px;
+
+            transition: all 0.3s ease;
+
+        }
+
+
+
+        .lang-btn.active, .lang-btn:hover {
+
+            background: var(--primary-green);
+
+            color: var(--white);
+
+        }
+
+
+
+        /* --- HEADER & NAV --- */
+
+        header {
+
+            background-color: var(--white);
+
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 100;
+
+        }
+
+
+
+        .nav-container {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 15px 20px;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+        }
+
+
+
+        .logo-placeholder {
+
+            display: flex;
+
+            align-items: center;
+
+            font-weight: 800;
+
+            font-size: 24px;
+
+            color: var(--primary-green);
+
+        }
+
+
+
+        .nav-right {
+
+            display: flex;
+
+            align-items: center;
+
+        }
+
+
+
+        nav ul {
+
+            list-style: none;
+
+            display: flex;
+
+            gap: 25px;
+
+        }
+
+
+
+        nav a {
+
+            text-decoration: none;
+
+            color: var(--text-dark);
+
+            font-weight: 600;
+
+            font-size: 14px;
+
+            text-transform: uppercase;
+
+            transition: color 0.3s;
+
+        }
+
+
+
+        nav a:hover { color: var(--accent-yellow); }
+
+
+
+        /* --- HERO SECTION --- */
+
+        .hero {
+
+            background-color: var(--bg-light);
+
+            padding: 80px 20px;
+
+            text-align: center;
+
+            border-bottom: 4px solid var(--accent-yellow);
+
+        }
+
+
+
+        .hero h1 { font-size: 42px; max-width: 800px; margin: 0 auto 20px; }
+
+        .hero p { font-size: 18px; max-width: 700px; margin: 0 auto 30px; }
+
+
+
+        .metrics-bar {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 40px;
+
+            margin-top: 40px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+
+        .metric {
+
+            background: var(--white);
+
+            padding: 20px 30px;
+
+            border-radius: 8px;
+
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+
+            border-top: 3px solid var(--primary-green);
+
+            min-width: 200px;
+
+        }
+
+
+
+        .metric h3 { font-size: 28px; color: var(--accent-yellow); margin-bottom: 5px; }
+
+        .metric p { margin: 0; font-size: 14px; font-weight: 600; color: var(--text-dark); text-transform: uppercase; }
+
+
+
+        /* --- LEADERSHIP SECTION --- */
+
+        .leadership { padding: 80px 0; }
+
+        .leadership-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: center; }
+
+        
+
+        .ceo-photo {
+
+            width: 100%;
+
+            height: 400px;
+
+            background-color: #e0e0e0;
+
+            border-radius: 8px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #888;
+
+            font-size: 14px;
+
+            border: 2px dashed #ccc;
+
+        }
+
+
+
+        .leadership-content h2 { font-size: 32px; }
+
+        .leadership-content h4 { color: var(--accent-yellow); font-size: 18px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
+
+
+
+        /* --- OPERATIONS SECTION --- */
+
+        .operations { background-color: var(--primary-green); color: var(--white); padding: 80px 0; }
+
+        .operations h2 { color: var(--white); text-align: center; font-size: 32px; margin-bottom: 50px; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+
+        .service-card { background: rgba(255, 255, 255, 0.05); padding: 30px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1); }
+
+        .service-card h3 { color: var(--accent-yellow); font-size: 20px; }
+
+        .service-card p { color: #e0e0e0; font-size: 15px; }
+
+
+
+        /* --- FOOTER --- */
+
+        footer { background-color: var(--text-dark); color: var(--white); padding: 60px 0 30px; }
+
+        .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+
+        .footer-col h3 { color: var(--accent-yellow); margin-bottom: 20px; font-size: 18px; }
+
+        .footer-col p { color: #ccc; font-size: 14px; margin-bottom: 10px; }
+
+        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 12px; color: #888; }
+
+
+
+        @media (max-width: 768px) {
+
+            .nav-container { flex-direction: column; gap: 15px; }
+
+            .nav-right { flex-direction: column; gap: 15px; }
+
+            .lang-switch { margin-left: 0; margin-top: 10px; }
+
+            .leadership-grid { grid-template-columns: 1fr; }
+
+            .footer-grid { grid-template-columns: 1fr; }
+
+        }
+
+    </style>
+
+</head>
+
+<body class="en"> <!-- Default language is English -->
+
+
+
+    <header>
+
+        <div class="nav-container">
+
+            <div class="logo-placeholder">DON COCO</div>
+
+            <div class="nav-right">
+
+                <nav>
+
+                    <ul>
+
+                        <li><a href="#about"><span class="lang-en">Corporate Profile</span><span class="lang-es">Perfil Corporativo</span></a></li>
+
+                        <li><a href="#leadership"><span class="lang-en">Leadership</span><span class="lang-es">Liderazgo</span></a></li>
+
+                        <li><a href="#operations"><span class="lang-en">Operations</span><span class="lang-es">Operaciones</span></a></li>
+
+                        <li><a href="#contact"><span class="lang-en">Contact</span><span class="lang-es">Contacto</span></a></li>
+
+                    </ul>
+
+                </nav>
+
+                <div class="lang-switch">
+
+                    <button class="lang-btn active" onclick="setLang('en')" id="btn-en">EN</button>
+
+                    <button class="lang-btn" onclick="setLang('es')" id="btn-es">ES</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <section class="hero" id="about">
+
+        <div class="container">
+
+            <h1>
+
+                <span class="lang-en">Leading Food & Beverage Retail Operations in Caracas</span>
+
+                <span class="lang-es">Líderes en el Sector Retail de Alimentos y Bebidas en Caracas</span>
+
+            </h1>
+
+            <p>
+
+                <span class="lang-en">Don Coco is a rapidly scaling retail chain specializing in premium, tropical-inspired beverages and artisanal desserts. Through direct ownership and strategic commercial alliances, we deliver quality to thousands of customers.</span>
+
+                <span class="lang-es">Don Coco es una cadena minorista en rápida expansión especializada en bebidas de primera calidad de inspiración tropical y postres artesanales. A través de locales propios y alianzas comerciales estratégicas, entregamos calidad a miles de clientes.</span>
+
+            </p>
+
+            
+
+            <div class="metrics-bar">
+
+                <div class="metric">
+
+                    <h3>2020</h3>
+
+                    <p><span class="lang-en">Year Established</span><span class="lang-es">Año de Fundación</span></p>
+
+                </div>
+
+                <div class="metric">
+
+                    <h3><span class="lang-en">Multiple</span><span class="lang-es">Múltiples</span></h3>
+
+                    <p><span class="lang-en">Retail Locations</span><span class="lang-es">Sucursales Comerciales</span></p>
+
+                </div>
+
+                <div class="metric">
+
+                    <h3>B2C & B2B</h3>
+
+                    <p><span class="lang-en">Business Model</span><span class="lang-es">Modelo de Negocio</span></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="leadership" id="leadership">
+
+        <div class="container">
+
+            <div class="leadership-grid">
+
+                <div class="ceo-photo">
+
+                    <span class="lang-en">[Insert Professional Photo of Reinaldo Zambrano]</span>
+
+                    <span class="lang-es">[Insertar Foto Profesional de Reinaldo Zambrano]</span>
+
+                </div>
+
+                <div class="leadership-content">
+
+                    <h2><span class="lang-en">Executive Leadership</span><span class="lang-es">Liderazgo Ejecutivo</span></h2>
+
+                    <h4><span class="lang-en">Reinaldo Zambrano — CEO & Founder</span><span class="lang-es">Reinaldo Zambrano — CEO y Fundador</span></h4>
+
+                    
+
+                    <p class="lang-en">Reinaldo Zambrano is the driving force behind Don Coco's strategic expansion. Founding the company in 2020, Reinaldo has successfully scaled the business from a single flagship storefront into a recognized retail network across the Venezuelan capital.</p>
+
+                    <p class="lang-es">Reinaldo Zambrano es la fuerza impulsora detrás de la expansión estratégica de Don Coco. Al fundar la empresa en 2020, Reinaldo ha escalado con éxito el negocio desde un único local principal hasta una red minorista reconocida en toda la capital venezolana.</p>
+
+
+
+                    <p class="lang-en">As Chief Executive Officer, he oversees supply chain logistics, quality control protocols, and the development of strategic commercial alliances. Under his leadership, Don Coco has implemented a hybrid expansion model, combining fully owned flagship locations with a robust network of partnered branches to maximize market penetration.</p>
+
+                    <p class="lang-es">Como Director Ejecutivo (CEO), supervisa la logística de la cadena de suministro, los protocolos de control de calidad y el desarrollo de alianzas comerciales estratégicas. Bajo su liderazgo, Don Coco ha implementado un modelo de expansión híbrido, combinando sucursales propias con una sólida red de locales asociados para maximizar la penetración en el mercado.</p>
+
+
+
+                    <p class="lang-en">His vision focuses on operational excellence, financial sustainability, and delivering a standardized, premium product across all points of sale.</p>
+
+                    <p class="lang-es">Su visión se centra en la excelencia operativa, la sostenibilidad financiera y la entrega de un producto premium estandarizado en todos los puntos de venta.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="operations" id="operations">
+
+        <div class="container">
+
+            <h2><span class="lang-en">Our Core Product Lines</span><span class="lang-es">Nuestras Líneas de Productos Principales</span></h2>
+
+            <div class="services-grid">
+
+                <div class="service-card">
+
+                    <h3><span class="lang-en">Signature Coconut Shakes</span><span class="lang-es">Cocadas de Autor</span></h3>
+
+                    <p><span class="lang-en">Our flagship "Cocadas" are manufactured using high-quality, locally sourced coconuts, adhering to strict standardization processes across all our retail branches to ensure consistent flavor and quality.</span><span class="lang-es">Nuestras "Cocadas" insignia se fabrican utilizando cocos de alta calidad de origen local, adhiriéndose a estrictos procesos de estandarización en todas nuestras sucursales para garantizar un sabor y calidad consistentes.</span></p>
+
+                </div>
+
+                <div class="service-card">
+
+                    <h3><span class="lang-en">100% Natural Coconut Water</span><span class="lang-es">Agua de Coco 100% Natural</span></h3>
+
+                    <p><span class="lang-en">Pure, unprocessed coconut water distributed daily. We maintain a highly efficient cold-chain logistics system to guarantee product freshness from extraction to the final consumer.</span><span class="lang-es">Agua de coco pura y sin procesar distribuida diariamente. Mantenemos un sistema de logística de cadena de frío altamente eficiente para garantizar la frescura del producto desde la extracción hasta el consumidor final.</span></p>
+
+                </div>
+
+                <div class="service-card">
+
+                    <h3><span class="lang-en">Artisanal Popsicles (Paletas)</span><span class="lang-es">Paletas Artesanales</span></h3>
+
+                    <p><span class="lang-en">A diverse portfolio of premium natural, cream-based, and stuffed artisanal popsicles. Developed through proprietary recipes that cater to premium consumer tastes.</span><span class="lang-es">Un portafolio diverso de paletas artesanales premium naturales, a base de crema y rellenas. Desarrolladas a través de recetas exclusivas que satisfacen los gustos de consumidores exigentes.</span></p>
+
+                </div>
+
+                <div class="service-card">
+
+                    <h3><span class="lang-en">Gourmet Donuts</span><span class="lang-es">Donas Gourmet</span></h3>
+
+                    <p><span class="lang-en">High-rotation bakery products that complement our beverage lines. Manufactured daily to optimize inventory turnover and maximize cross-selling opportunities in our stores.</span><span class="lang-es">Productos de panadería de alta rotación que complementan nuestras líneas de bebidas. Fabricadas diariamente para optimizar la rotación de inventario y maximizar las oportunidades de venta cruzada en nuestras tiendas.</span></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <footer id="contact">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-col">
+
+                    <h3><span class="lang-en">Corporate Headquarters</span><span class="lang-es">Sede Corporativa</span></h3>
+
+                    <p><strong><span class="lang-en">Main Branch & Executive Office:</span><span class="lang-es">Sucursal Principal y Oficina Ejecutiva:</span></strong></p>
+
+                    <p>Centro (Bulevar entre Plaza Bolívar y Plaza El Venezolano)</p>
+
+                    <p>Caracas, Distrito Capital</p>
+
+                    <p>Venezuela</p>
+
+                </div>
+
+                <div class="footer-col">
+
+                    <h3><span class="lang-en">Legal & Contact Information</span><span class="lang-es">Información Legal y de Contacto</span></h3>
+
+                    <p><strong><span class="lang-en">Corporate Entity / RIF:</span><span class="lang-es">Entidad Corporativa / RIF:</span></strong> J-40000000-0</p>
+
+                    <p><strong>Email:</strong> management@doncoco.com</p>
+
+                    <p><strong><span class="lang-en">Phone:</span><span class="lang-es">Teléfono:</span></strong> +58 412-0000000</p>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <p>
+
+                    <span class="lang-en">&copy; 2024 Don Coco. All rights reserved. This site is for corporate and informational purposes.</span>
+
+                    <span class="lang-es">&copy; 2024 Don Coco. Todos los derechos reservados. Este sitio es para fines corporativos e informativos.</span>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JavaScript to toggle language classes -->
+
+    <script>
+
+        function setLang(lang) {
+
+            // Update body class
+
+            document.body.className = lang;
+
+            
+
+            // Update button active states
+
+            document.getElementById('btn-en').classList.remove('active');
+
+            document.getElementById('btn-es').classList.remove('active');
+
+            document.getElementById('btn-' + lang).classList.add('active');
+
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
