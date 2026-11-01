@@ -166,7 +166,7 @@
             margin-bottom: 0;
         }
 
-        .operations h3 {
+        .catalog-category > h3 {
             color: var(--accent-yellow);
             font-size: 26px;
             margin-bottom: 25px;
@@ -192,7 +192,7 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
         }
 
@@ -223,6 +223,7 @@
             flex: 1;
         }
 
+        .service-card h3,
         .service-card h5 {
             color: var(--accent-yellow);
             font-size: 19px;
@@ -376,24 +377,38 @@
                     </h4>
                     <div class="services-grid">
                         <div class="service-card">
-                            <img src="fresa.jpg" alt="Paleta Natural de Fresa">
+                            <img src="fresa.jpg" alt="Fresa" style="width: 100%; height: 250px; object-fit: cover; border-radius: 4px 4px 0 0;">
                             <div class="service-card-body">
-                                <h5><span class="lang-en">Natural Strawberry</span><span class="lang-es">Fresa Natural</span></h5>
-                                <p><span class="lang-en">Refreshing fruit-based popsicle formulated with selected whole strawberries for high-volume daily rotation across retail locations.</span><span class="lang-es">Paleta refrescante a base de fruta formulada con fresas enteras seleccionadas para alta rotación diaria en sucursales.</span></p>
+                                <h3><span class="lang-en">Strawberry</span><span class="lang-es">Fresa</span></h3>
+                                <p><span class="lang-en">Refreshing natural popsicle formulated with selected whole strawberries for high daily rotation.</span><span class="lang-es">Paleta refrescante elaborada con fresas enteras seleccionadas para alta rotación diaria.</span></p>
                             </div>
                         </div>
                         <div class="service-card">
-                            <img src="parchita.jpg" alt="Paleta Natural de Parchita">
+                            <img src="parchita.jpg" alt="Parchita" style="width: 100%; height: 250px; object-fit: cover; border-radius: 4px 4px 0 0;">
                             <div class="service-card-body">
-                                <h5><span class="lang-en">Passion Fruit (Parchita)</span><span class="lang-es">Parchita Tropical</span></h5>
-                                <p><span class="lang-en">Tropical passion fruit popsicle crafted from natural pulp, balancing vibrant citrus acidity with standardized sweetness.</span><span class="lang-es">Paleta tropical elaborada con pulpa natural de parchita, equilibrando acidez vibrante y dulzor estandarizado.</span></p>
+                                <h3><span class="lang-en">Passion Fruit (Parchita)</span><span class="lang-es">Parchita</span></h3>
+                                <p><span class="lang-en">Tropical popsicle crafted from natural passion fruit pulp with balanced citrus acidity.</span><span class="lang-es">Paleta tropical elaborada con pulpa natural de parchita y acidez cítrica equilibrada.</span></p>
                             </div>
                         </div>
                         <div class="service-card">
-                            <img src="mora.jpg" alt="Paleta Natural de Mora">
+                            <img src="mora.jpg" alt="Mora" style="width: 100%; height: 250px; object-fit: cover; border-radius: 4px 4px 0 0;">
                             <div class="service-card-body">
-                                <h5><span class="lang-en">Wild Blackberry (Mora)</span><span class="lang-es">Mora Silvestre</span></h5>
-                                <p><span class="lang-en">Andean blackberry popsicle produced with 100% natural fruit puree, delivering intense flavor and consistent quality.</span><span class="lang-es">Paleta de mora andina elaborada con puré de fruta 100% natural, ofreciendo sabor intenso y calidad consistente.</span></p>
+                                <h3><span class="lang-en">Blackberry (Mora)</span><span class="lang-es">Mora</span></h3>
+                                <p><span class="lang-en">Andean blackberry popsicle produced with 100% natural fruit puree and intense flavor.</span><span class="lang-es">Paleta de mora andina elaborada con puré de fruta 100% natural y sabor intenso.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="fresaparchita.jpg" alt="Fresa-Parchita" style="width: 100%; height: 250px; object-fit: cover; border-radius: 4px 4px 0 0;">
+                            <div class="service-card-body">
+                                <h3><span class="lang-en">Strawberry-Passion Fruit</span><span class="lang-es">Fresa-Parchita</span></h3>
+                                <p><span class="lang-en">Dual-layer natural fruit popsicle combining sweet strawberry and vibrant passion fruit pulp.</span><span class="lang-es">Paleta natural bicolor que combina el dulzor de la fresa con pulpa vibrante de parchita.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="morafresa.jpg" alt="Mora-Fresa" style="width: 100%; height: 250px; object-fit: cover; border-radius: 4px 4px 0 0;">
+                            <div class="service-card-body">
+                                <h3><span class="lang-en">Blackberry-Strawberry</span><span class="lang-es">Mora-Fresa</span></h3>
+                                <p><span class="lang-en">Artisanal red-berry blend uniting wild blackberry and ripe strawberry in a refreshing format.</span><span class="lang-es">Combinación artesanal de frutos rojos que une mora silvestre y fresa madura en formato refrescante.</span></p>
                             </div>
                         </div>
                     </div>
@@ -406,31 +421,73 @@
                     </h4>
                     <div class="services-grid">
                         <div class="service-card">
-                            <img src="paletadecoco.jpg" alt="Paleta Cremosa de Coco">
+                            <img src="paletadecoco.jpg" alt="Coco" style="width: 100%; height: 250px; object-fit: cover; border-radius: 4px 4px 0 0;">
                             <div class="service-card-body">
-                                <h5><span class="lang-en">Creamy Coconut</span><span class="lang-es">Coco Cremoso</span></h5>
-                                <p><span class="lang-en">Signature cream-based coconut popsicle coated with shredded coconut flakes, consolidated as our top-selling frozen SKU.</span><span class="lang-es">Paleta insignia a base de crema de coco recubierta con coco rallado, consolidada como nuestro SKU congelado líder en ventas.</span></p>
+                                <h3><span class="lang-en">Coconut</span><span class="lang-es">Coco</span></h3>
+                                <p><span class="lang-en">Signature cream-based coconut popsicle coated with natural shredded coconut flakes.</span><span class="lang-es">Paleta insignia a base de crema de coco recubierta con lluvia de coco natural rallado.</span></p>
                             </div>
                         </div>
                         <div class="service-card">
-                            <img src="chocolate.jpg" alt="Paleta Cremosa de Chocolate">
+                            <img src="chocolate.jpg" alt="Chocolate" style="width: 100%; height: 250px; object-fit: cover; border-radius: 4px 4px 0 0;">
                             <div class="service-card-body">
-                                <h5><span class="lang-en">Artisanal Chocolate</span><span class="lang-es">Chocolate Artesanal</span></h5>
-                                <p><span class="lang-en">Velvety cream-based chocolate popsicle crafted with selected cocoa for an intense and indulgent flavor profile.</span><span class="lang-es">Paleta cremosa de textura aterciopelada elaborada con cacao seleccionado para un perfil de sabor intenso e indulgente.</span></p>
+                                <h3><span class="lang-en">Chocolate</span><span class="lang-es">Chocolate</span></h3>
+                                <p><span class="lang-en">Velvety cream-based chocolate popsicle crafted with selected cocoa for an indulgent profile.</span><span class="lang-es">Paleta cremosa de textura aterciopelada elaborada con cacao seleccionado de perfil intenso.</span></p>
                             </div>
                         </div>
                         <div class="service-card">
-                            <img src="fresalechecondensada.jpg" alt="Paleta de Fresa con Leche Condensada">
+                            <img src="marquesadeparchita.jpg" alt="Marquesa de Parchita" style="width: 100%; height: 250px; object-fit: cover; border-radius: 4px 4px 0 0;">
                             <div class="service-card-body">
-                                <h5><span class="lang-en">Strawberry &amp; Condensed Milk</span><span class="lang-es">Fresa con Leche Condensada</span></h5>
-                                <p><span class="lang-en">Stuffed artisanal popsicle combining natural strawberry with a rich condensed milk core to drive premium ticket value.</span><span class="lang-es">Paleta artesanal rellena que combina fresa natural con un centro cremoso de leche condensada de alto atractivo comercial.</span></p>
+                                <h3><span class="lang-en">Passion Fruit Marquesa</span><span class="lang-es">Marquesa de Parchita</span></h3>
+                                <p><span class="lang-en">Creamy passion fruit dessert popsicle folded with traditional sweet biscuit pieces.</span><span class="lang-es">Paleta cremosa inspirada en la marquesa tradicional de parchita con trozos de galleta dulce.</span></p>
                             </div>
                         </div>
                         <div class="service-card">
-                            <img src="manichoco.jpg" alt="Paleta Maní Choco">
+                            <img src="lechechoco.jpg" alt="Leche-Choco" style="width: 100%; height: 250px; object-fit: cover; border-radius: 4px 4px 0 0;">
                             <div class="service-card-body">
-                                <h5><span class="lang-en">Crunchy Choco-Peanut</span><span class="lang-es">Maní Choco Crocante</span></h5>
-                                <p><span class="lang-en">Creamy popsicle enrobed in chocolate with roasted peanut pieces, engineered for multi-textured indulgence and repeat purchases.</span><span class="lang-es">Paleta cremosa bañada en chocolate con trozos de maní tostado, diseñada para generar recompra y diferenciación en vitrina.</span></p>
+                                <h3><span class="lang-en">Milk-Choco</span><span class="lang-es">Leche-Choco</span></h3>
+                                <p><span class="lang-en">Two-tone artisanal popsicle blending smooth sweet milk cream with rich cocoa.</span><span class="lang-es">Paleta artesanal bitono que fusiona suave crema de leche dulce con cacao intenso.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="manichoco.jpg" alt="Maní-Choco" style="width: 100%; height: 250px; object-fit: cover; border-radius: 4px 4px 0 0;">
+                            <div class="service-card-body">
+                                <h3><span class="lang-en">Peanut-Choco</span><span class="lang-es">Maní-Choco</span></h3>
+                                <p><span class="lang-en">Creamy popsicle enrobed in chocolate and crunchy roasted peanut pieces.</span><span class="lang-es">Paleta cremosa bañada en chocolate con trozos crocantes de maní tostado.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="yogurtleta.jpg" alt="Yogurtleta" style="width: 100%; height: 250px; object-fit: cover; border-radius: 4px 4px 0 0;">
+                            <div class="service-card-body">
+                                <h3><span class="lang-en">Yogurtleta</span><span class="lang-es">Yogurtleta</span></h3>
+                                <p><span class="lang-en">Creamy artisanal yogurt popsicle infused with natural strawberry fruit slices.</span><span class="lang-es">Paleta artesanal a base de yogurt cremoso con láminas de fresa natural seleccionada.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="chocolatelechecondensada.jpg" alt="Chocolate Relleno" style="width: 100%; height: 250px; object-fit: cover; border-radius: 4px 4px 0 0;">
+                            <div class="service-card-body">
+                                <h3><span class="lang-en">Stuffed Chocolate</span><span class="lang-es">Chocolate Relleno</span></h3>
+                                <p><span class="lang-en">Intense creamy chocolate popsicle filled with a luscious condensed milk center.</span><span class="lang-es">Paleta de chocolate cremoso rellena con un centro fluido de leche condensada.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="fresalechecondensada.jpg" alt="Fresa Rellena" style="width: 100%; height: 250px; object-fit: cover; border-radius: 4px 4px 0 0;">
+                            <div class="service-card-body">
+                                <h3><span class="lang-en">Stuffed Strawberry</span><span class="lang-es">Fresa Rellena</span></h3>
+                                <p><span class="lang-en">Artisanal strawberry popsicle featuring a sweet, creamy condensed milk core.</span><span class="lang-es">Paleta artesanal de fresa rellena con un cremoso corazón de leche condensada.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="parchitalechecondensada.jpg" alt="Parchita Rellena" style="width: 100%; height: 250px; object-fit: cover; border-radius: 4px 4px 0 0;">
+                            <div class="service-card-body">
+                                <h3><span class="lang-en">Stuffed Passion Fruit</span><span class="lang-es">Parchita Rellena</span></h3>
+                                <p><span class="lang-en">Vibrant passion fruit exterior contrasted with a rich condensed milk filling.</span><span class="lang-es">Exterior cítrico de parchita natural contrastado con un relleno de leche condensada.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="moralechecondensada.jpg" alt="Mora Rellena" style="width: 100%; height: 250px; object-fit: cover; border-radius: 4px 4px 0 0;">
+                            <div class="service-card-body">
+                                <h3><span class="lang-en">Stuffed Blackberry</span><span class="lang-es">Mora Rellena</span></h3>
+                                <p><span class="lang-en">Wild blackberry popsicle stuffed with smooth condensed milk for a balanced finish.</span><span class="lang-es">Paleta de mora silvestre rellena de suave leche condensada para un contraste perfecto.</span></p>
                             </div>
                         </div>
                     </div>
