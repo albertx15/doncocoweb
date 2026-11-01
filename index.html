@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,14 +52,20 @@
         }
 
         .lang-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
             background: transparent;
             border: 2px solid var(--primary-green);
             color: var(--primary-green);
-            padding: 4px 10px;
+            padding: 5px 12px;
             border-radius: 20px;
             cursor: pointer;
             font-weight: bold;
             font-size: 12px;
+            line-height: 1;
+            white-space: nowrap;
             transition: all 0.3s ease;
         }
 
@@ -276,7 +282,7 @@
         }
     </style>
 </head>
-<body class="en"> <!-- Default language is English -->
+<body class="es"> <!-- Default language is Spanish -->
 
     <header>
         <div class="nav-container">
@@ -293,8 +299,8 @@
                     </ul>
                 </nav>
                 <div class="lang-switch">
-                    <button class="lang-btn active" onclick="setLang('en')" id="btn-en">EN</button>
-                    <button class="lang-btn" onclick="setLang('es')" id="btn-es">ES</button>
+                    <button class="lang-btn active" onclick="setLang('es')" id="btn-es">🇻🇪 ES</button>
+                    <button class="lang-btn" onclick="setLang('en')" id="btn-en">🇺🇸 EN</button>
                 </div>
             </div>
         </div>
@@ -579,8 +585,9 @@
     <!-- JavaScript to toggle language classes -->
     <script>
         function setLang(lang) {
-            // Update body class
+            // Update body class and document lang attribute
             document.body.className = lang;
+            document.documentElement.lang = lang;
             
             // Update button active states
             document.getElementById('btn-en').classList.remove('active');
