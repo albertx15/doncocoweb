@@ -55,7 +55,6 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 5px;
             background: transparent;
             border: 2px solid var(--primary-green);
             color: var(--primary-green);
@@ -67,6 +66,13 @@
             line-height: 1;
             white-space: nowrap;
             transition: all 0.3s ease;
+        }
+
+        .lang-btn img {
+            vertical-align: middle;
+            margin-right: 5px;
+            border-radius: 2px;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
         }
 
         .lang-btn.active, .lang-btn:hover {
@@ -385,8 +391,8 @@
                     </ul>
                 </nav>
                 <div class="lang-switch">
-                    <button class="lang-btn active" onclick="setLang('es')" id="btn-es">🇻🇪 ES</button>
-                    <button class="lang-btn" onclick="setLang('en')" id="btn-en">🇺🇸 EN</button>
+                    <button class="lang-btn active" onclick="setLang('es')" id="btn-es"><img src="https://flagcdn.com/ve.svg" width="20" alt="Venezuela"> ES</button>
+                    <button class="lang-btn" onclick="setLang('en')" id="btn-en"><img src="https://flagcdn.com/us.svg" width="20" alt="USA"> EN</button>
                 </div>
             </div>
         </div>
